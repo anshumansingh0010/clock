@@ -1,0 +1,178 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+body{
+  height:100vh;
+  background: url("nature.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.7s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+.changebtn{
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:150px;
+  height: 60px;
+  border-radius:50px;
+  padding-left: 40px;
+  background: #ffffff;
+  box-shadow: 10px 10px 20px #a4a4a4;
+  user-select: none;
+}
+.changebtn span{
+  position:absolute;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  color:#1a191d;
+  left: 5px;
+  width:50px;
+  height: 50px;
+  background: linear-gradient(to top, #a3aaba, #e0e0e0);
+  border-radius: 50%;
+  border: 2px solid #e0e0e0;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.icon{
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  left:7.5px;
+  transition: 0.7s ease-in-out;
+}
+
+/* dialogbox */
+dialog {
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 16px 12px rgba(0,0,0,0.2);
+  width: 35%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.menu{
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  margin:8px;
+  padding:5px;
+  font-size: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* digitalclock */
+.digitalclock{
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  width:100%;
+  max-width:430px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1),
+  0px 10px 20px rgba(0,0,0,0.7);
+  height:130px;
+  border-radius:12px;
+  padding:20px;
+  position: absolute;
+  user-select: none;
+  transition: opacity 1s ease-in-out;
+}
+.digitalclock h1{
+  font-size: 4rem;
+  font-weight:600;
+  cursor: pointer;
+
+}
+.digitalclock span{
+  position:relative;
+  top:-10%;
+  font-size: 20px;
+  font-weight: 700;
+  margin-left: 7px;
+}
+@media (max-width:500px){
+  .digitalclock{
+    max-width:260px;
+    height:110px;
+  }
+  .digitalclock h1{
+    font-size: 2.3rem;
+  }
+  .digitalclock span{
+    font-size: 15px;
+    margin-left: 4px;
+  }
+}
+
+/* analogclock */
+.container{
+  position:absolute;
+  top:38%;
+  left:42%;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  user-select: none;
+}
+.analogclock{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: rgba(154, 171, 238, 0.1);
+  border: rgba(255,255,255,0.25);
+  box-shadow: 0px 0px 30px rgba(0,0,0,0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.analogclock span{
+  position: absolute;
+  transform: rotate(calc(30deg * var(--i)));
+  inset:12px;
+  text-align: center;
+}
+.analogclock span b{
+  display:inline-block;
+  transform: rotate(calc(-30deg* var(--i)));
+  font-size: 20px;
+}
+.analogclock::before{
+  content:'' ;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  z-index: 2;
+  background-color: azure;
+}
+.hand{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.hand i{
+  position:absolute;
+  background-color: var(--clr);
+  width: 4px;
+  height: var(--h);
+  border-radius: 8px;
+}

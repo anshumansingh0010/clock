@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Clock</title>
+  <link rel="stylesheet" href="digitalclock.css">
+</head>
+<body onload="move(element)">
+  <a class="changebtn"><span><svg class="icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="#000000" d="M228.576 26.213v207.32h54.848V26.214h-54.848zm-28.518 45.744C108.44 96.58 41 180.215 41 279.605c0 118.74 96.258 215 215 215 118.74 0 215-96.26 215-215 0-99.39-67.44-183.025-159.057-207.647v50.47c64.6 22.994 110.85 84.684 110.85 157.177 0 92.117-74.676 166.794-166.793 166.794-92.118 0-166.794-74.678-166.794-166.795 0-72.494 46.25-134.183 110.852-157.178v-50.47z"/></svg></span></a>
+  
+  <div class="digitalclock">
+    <h1 id="time"></h1>
+    <span id="timeformat"></span>
+  </div>
+  <dialog id="dialogbox">
+    <div class="menu">Alarm</div>
+    <div class="menu">Stopwatch</div>
+    <div class="menu">Timer</div>
+  </dialog>
+    <!--  analogclock -->
+    <div class="container">
+      <div class="analogclock">
+        <div style="--clr:#ff3d58; --h:72px" id="hours" class="hand"><i></i></div>
+        <div style="--clr:#00a6ff; --h:80px" id="minutes" class="hand"><i></i></div>
+        <div style="--clr:#ffffff; --h:94px" id="seconds" class="hand"><i></i></div>
+  
+        <span style="--i:1;"><b>1</b></span>
+        <span style="--i:2;"><b>2</b></span>
+        <span style="--i:3;"><b>3</b></span>
+        <span style="--i:4;"><b>4</b></span>
+        <span style="--i:5;"><b>5</b></span>
+        <span style="--i:6;"><b>6</b></span>
+        <span style="--i:7;"><b>7</b></span>
+        <span style="--i:8;"><b>8</b></span>
+        <span style="--i:9;"><b>9</b></span>
+        <span style="--i:10;"><b>10</b></span>
+        <span style="--i:11;"><b>11</b></span>
+        <span style="--i:12;"><b>12</b></span></div>
+    </div>
+  <script src="digitalclock.js"></script>
+</body>
+</html>
