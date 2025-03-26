@@ -74,9 +74,22 @@ dialog::backdrop {
   font-size: 30px;
   border-radius: 4px;
   cursor: pointer;
-  text-decoration:none;
 }
-
+a{
+  text-decoration: none;
+}
+a:link {
+  color: black; /* Unvisited link */
+}
+a:visited {
+  color: black; /* Visited link */
+}
+a:hover {
+  color: black; /* Mouse over link */
+}
+a:active {
+  color: black; /* Selected link */
+}
 /* digitalclock */
 .digitalclock{
   top:50%;
